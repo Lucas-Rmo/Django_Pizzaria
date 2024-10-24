@@ -1,0 +1,26 @@
+{% include "base.html" %}
+
+
+{% block content %}
+<center>
+    <h1>Cardápio</h1>
+<table>
+    <tr>
+        <th class='table-title'>Pizza</th>
+        <th class='table-title'>Ingredientes</th>
+        <th class='table-title'>Preço</th>
+    </tr>
+    {% for pizza in pizzas  %}
+    <tr>
+       <th class='table-field'>{{ pizza.nome }}</th>
+       <th class='table-field'>{{ pizza.ingredientes}}</th>
+       <th class='table-price'>R$ {{ pizza.preco }}</th>
+    </tr>
+    {% endfor %}
+</table>
+</center>
+<! -- <img src="{{ pizza.imagem.url }}" alt="{{ pizza.nome }}">  
+
+
+
+{% endblock content %}

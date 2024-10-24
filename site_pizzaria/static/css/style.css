@@ -1,0 +1,27 @@
+body{
+    padding:0;
+    margin:0;
+    font-family:'Courier New', Courier, monospace;
+    background:#ffffff
+}
+
+table{
+
+    border: 2px solid black;
+    
+}
+tr,th{
+    width:10%;
+    border: 2px solid black;
+    padding:5px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+tr:nth-child(even) {
+    background-color: #b35353;
+    
+}
+tr:nth-child(odd) {
+    background-color: #5fb957;
+}
