@@ -14,3 +14,9 @@ class PedidoForm(forms.ModelForm):
             'pizza2' : forms.Select(attrs={'class': 'form-control select-pizza', 'placeholder': 'Sabor 2(opcional)'}),
 
         }
+
+class BuscarPedidoForm(forms.Form):
+    numero = forms.IntegerField(widget=forms.NumberInput(attrs={'class':'form-control'}))
+    nome_cliente = forms.CharField(max_length=50,widget=forms.TextInput(attrs={'class':'form-control'}))
+    endereco = forms.CharField(max_length=250,widget=forms.TextInput(attrs={'class':'form-control'}))
+

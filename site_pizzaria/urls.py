@@ -10,6 +10,8 @@ urlpatterns = [
     path('cardapio/',PizzaListView.as_view(),name='cardapio'),
     path('pedido/',pedido_form,name='pedido'),
     path('pedido/finalizado/<int:pedido_id>/',pedido_concluido,name='pedido_feito'),
+    path('pedido/pesquisar/',buscar_pedido,name='buscar_pedido'),
+    path('',home,name='home')
 ]
 
 

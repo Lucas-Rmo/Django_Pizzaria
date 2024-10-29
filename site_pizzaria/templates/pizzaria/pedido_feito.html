@@ -3,17 +3,18 @@
 {% block title %}Pedido Concluído{% endblock title %}
 
 {% block content %}
-<center>
-<h1>Pedido Concluído!</h1>
-<p>Id do pedido: {{ pedido.id }} </p>
-<p>Nome: {{ pedido.nome_cliente }}</p>
-<p>Endereço: {{ pedido.endereco }}</p>
-<p>Borda: {{ pedido.borda }}</p>
-<p>Sabor 1: {{ pedido.pizza1 }}</p>
-{% if pedido.pizza2 %}
-<p>Sabor 2: {{ pedido.pizza2 }}</p>
-{% endif %}
-<p>Preço Total: R$ {{ pedido.preco|floatformat:2 }}</p>
-<p>Situação do pedido: {{ pedido.status }}
-</center>
+<div class="pedido-concluido">
+    <h1>Pedido Concluído!</h1>
+    <p>Para rastrear o pedido, por gentileza guarde o ID do pedido, seu nome e seu endereço.</p>
+    <p>Id do pedido: {{ pedido.id }} </p>
+    <p>Nome: {{ pedido.nome_cliente }}</p>
+    <p>Endereço: {{ pedido.endereco }}</p>
+    <p>Borda: {{ pedido.borda }}</p>
+    <p>Sabor 1: {{ pedido.pizza1 }}</p>
+    {% if pedido.pizza2 %}
+    <p>Sabor 2: {{ pedido.pizza2 }}</p>
+    {% endif %}
+    <p class="preco-total">Preço Total: R$ {{ pedido.preco|floatformat:2 }}</p>
+    <p class="situacao">Situação do pedido: {{ pedido.status }}</p>
+</div>
 {% endblock content %}

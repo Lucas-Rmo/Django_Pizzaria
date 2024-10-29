@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<center>
+    <form class="form-busca-pedido" method = "POST">
+        {% csrf_token %}
+    {{ form.as_p }}
+        <button type="submit" class="btn-ok">Buscar pedido</button>
+    </form>
+</center>
+{% endblock content %}

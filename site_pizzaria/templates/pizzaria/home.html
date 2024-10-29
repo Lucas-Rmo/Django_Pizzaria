@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<center>
+    <div class="segmento">
+      <br>
+<h1>Pixelria</h1>
+<p class="home-texto">Seja bem-vindo(a) ao nosso site!Aqui você pode consultar o nosso cardápio,
+    realizar um pedido on-line e acompanhar ele!</p>
+</div>
+<br>
+<div class="segmento">
+  <br>
+<h1>Principais pizzas:</h1>
+<br><br><br>
+
+
+<div class="slideshow-container">
+    <!-- Radio buttons to control the slides -->
+    <input type="radio" name="slider" id="slide1" checked>
+    <input type="radio" name="slider" id="slide2">
+    <input type="radio" name="slider" id="slide3">
+    
+    <!-- Slide 1 -->
+    <div class="slide" id="s1">
+      <div class="slide-image">
+        <img src="static/pizzas/Portuguesa.png" alt="Image 1">
+      </div>
+      <div class="slide-text">
+        <h2>Portuguesa</h2>
+        <p class="home-texto">Ingredientes:Molho de tomate, presunto, ovos, cebola, azeitona, pimentão, ervilha, mussarela e orégano.</p>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide" id="s2">
+      <div class="slide-image">
+        <img src="static/pizzas/Peperonni.png" alt="Image 2">
+      </div>
+      <div class="slide-text">
+        <h2>Peperonni</h2>
+        <p class="home-texto">Ingredientes:Molho de tomate, mussarela, pepperoni fatiado e orégano.</p>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide" id="s3">
+      <div class="slide-image">
+        <img src="static/pizzas/4_queijos.png" alt="Image 3">
+      </div>
+      <div class="slide-text">
+        <h2>4 Queijos</h2>
+        <p class="home-texto">Ingredientes:Molho de tomate, mussarela, provolone, gorgonzola, parmesão e orégano.</p>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+<br>
+<div class="segmento">
+<h1>Sobre nós:</h1>
+<p class="home-texto">
+    Aqui na Pixelria, a tradição e a inovação se encontram para criar a melhor experiência em pizzas artesanais. Inspirados pelo mundo dos pixels, cada pizza aqui é feita com precisão e cuidado, garantindo que cada mordida seja uma explosão de sabor e qualidade.
+Desde nossas massas feitas à mão até os ingredientes frescos e selecionados, a Pixelria oferece uma experiência única e saborosa para nossos clientes. Com sabores clássicos e opções exclusivas, nossas pizzas são perfeitas para qualquer ocasião.
+</p>
+</div>
+</center>
+
+{% endblock content %}

@@ -4,34 +4,35 @@
 
 	{% block content  %}
 	<center>
+		<div class="pedido-form">
 	<form method="POST" enctype="multipart/form-data">
 		{% csrf_token %}
 		
 		<div class="form-group">
-			<label for="id_nome">Seu nome:</label><br>
+			<label class="form-lbl" for="id_nome">Seu nome:</label><br>
 			{{ form.nome_cliente }}
 		</div>
 		<div class="form-group">
-			<label for="id_endereco">Endereço:</label><br>
+			<label class="form-lbl" for="id_endereco">Endereço:</label><br>
 			{{ form.endereco }}
 		</div>
 		<div class="form-group">
-			<label for="id_borda">Borda:</label><br>
+			<label class="form-lbl"  for="id_borda">Borda:</label><br>
 			{{ form.borda }}
 		</div>
 		<div class="form-group">
-			<label for="id_pizza1">Sabor 1:</label><br>
+			<label class="form-lbl" for="id_pizza1">Sabor 1:</label><br>
 			{{ form.pizza1 }} 
 		</div>
 		<div class="form-group">
-			<label for="id_pizza2">Sabor 2 - opcional:</label><br>
+			<label class="form-lbl" for="id_pizza2">Sabor 2 - opcional:</label><br>
 			{{ form.pizza2 }}
 		</div>
 		
 		<br>
-		<button type="submit">Realizar pedido</button>
+		<button class="btn-ok" type="submit">Realizar pedido</button>
 	</form>
-
+</div>
 </center>
 
 	{% endblock content  %}

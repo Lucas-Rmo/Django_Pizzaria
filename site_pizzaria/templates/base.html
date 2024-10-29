@@ -1,17 +1,30 @@
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
-<title>{% block title %}Pixelria{% endblock title %}</title>
+<link rel="icon" type="image/png" href="{% static 'logo/favicon.png' %}">
+<title>
+    {% block title %}Pixelria{% endblock title %}</title>
 <body>
     <div class="menu">
         <ul>
-            <li><a href="#"><img width=150px height=18px src=" {% static "logo/Logo.png" %}"></a>
+            <li><a href="{% url "home" %}"><img width=150px height=18px src=" {% static "logo/Logo.png" %}"></a>
             <li><a href="{% url "cardapio" %}">Cardápio</a>
             <li><a href="{% url "pedido" %}">Faça o seu pedido</a>
-            <li><a href="{% url "pedido" %}">Acompanhe seu pedido</a>
+            <li><a href="{% url "buscar_pedido" %}">Acompanhe seu pedido</a>
             <li><a href="#">Contato</a>
         </ul>
     </div>
+    <style>
+        body {
+            background-image: url("{% static 'background.png' %}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            image-rendering: pixelated;
+            color:black;
+            
+        }
+        </style>
     {% block content %}
 
 

@@ -31,3 +31,26 @@ def pedido_concluido(request,pedido_id):
     pedido = Pedido.objects.get(id=pedido_id)
     return render(request, 'pizzaria/pedido_feito.html', {'pedido':pedido})
 
+
+def buscar_pedido(request):
+    if request.method == 'POST':
+        form = BuscarPedidoForm(request.POST)
+        if form.is_valid():
+            numero = form.cleaned_data['numero']
+            nome_cliente = form.cleaned_data['nome_cliente']
+            endereco = form.cleaned_data['endereco']
+
+        #essa parte busca o pedido:
+        try:
+            pedido = Pedido.objects.get(id=numero, nome_cliente = nome_cliente, endereco = endereco)
+            return redirect('pedido_feito',pedido_id = pedido.id)
+
+        except Pedido.DoesNotExist:
+            form.add_error(None,'Pedido não encontrado com as informações fornecidas')
+    else:
+        form = BuscarPedidoForm()
+
+    return render(request, 'pizzaria/buscar_pedido.html', {'form':form})    
+def home(request):
+    return render(request,'pizzaria/home.html')
+
